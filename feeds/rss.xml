@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+	<version>2.0</version>
+	<channel>
+		<title>Private Feed Server</title>
+		<link>http://private-feeds-server.herokuapp.com</link>
+		<description>Just a simple private feed server to OAuth against for an API token.</description>
+		<item>
+			<title>Movie 1</title>
+			<link>http://example.com/movie.mp4</link>
+			<description>Movie 1 description</description>
+		</item>
+		<item>
+			<title>Movie 2</title>
+			<link>http://example.com/movie.mp4</link>
+			<description>Movie 2 description</description>
+		</item>
+		<item>
+			<title>Movie 1</title>
+			<link>http://example.com/movie.mp4</link>
+			<description>Movie 2 description</description>
+		</item>
+	</channel>
+</rss>

@@ -1,0 +1,23 @@
+{
+	"rss": {
+		"version": "2.0",
+		"channel": {
+			"title": "Private Feed Server",
+			"link": "http://private-feeds-server.herokuapp.com",
+			"description": "Just a simple private feed server to OAuth against for an API token.",
+			"item": [{
+				"title": "Movie 1",
+				"link": "http://example.com/movie.mp4",
+				"description": "Movie 1 description"
+			}, {
+				"title": "Movie 2",
+				"link": "http://example.com/movie.mp4",
+				"description": "Movie 2 description"
+			}, {
+				"title": "Movie 3",
+				"link": "http://example.com/movie.mp4",
+				"description": "Movie 3 description"
+			}]
+		}
+	}
+}
