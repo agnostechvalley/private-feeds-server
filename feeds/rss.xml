@@ -7,18 +7,18 @@
 		<description>Just a simple private feed server to OAuth against for an API token.</description>
 		<item>
 			<title>Movie 1</title>
-			<link>http://example.com/movie.mp4</link>
-			<description>Movie 1 description</description>
+			<link>http://techslides.com/demos/sample-videos/small.mp4</link>
+			<description>Movie 1 is a small mp4 video</description>
 		</item>
 		<item>
 			<title>Movie 2</title>
-			<link>http://example.com/movie.mp4</link>
-			<description>Movie 2 description</description>
+			<link>http://techslides.com/demos/sample-videos/small.webm</link>
+			<description>Movie 2 is a small webm video</description>
 		</item>
 		<item>
 			<title>Movie 1</title>
-			<link>http://example.com/movie.mp4</link>
-			<description>Movie 2 description</description>
+			<link>http://techslides.com/demos/sample-videos/small.ogv</link>
+			<description>Movie 2 is a small ogg video</description>
 		</item>
 	</channel>
 </rss>

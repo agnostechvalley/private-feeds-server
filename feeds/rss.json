@@ -7,16 +7,16 @@
 			"description": "Just a simple private feed server to OAuth against for an API token.",
 			"item": [{
 				"title": "Movie 1",
-				"link": "http://example.com/movie.mp4",
-				"description": "Movie 1 description"
+				"link": "http://techslides.com/demos/sample-videos/small.mp4",
+				"description": "Movie 1 is a small mp4 video"
 			}, {
 				"title": "Movie 2",
-				"link": "http://example.com/movie.mp4",
-				"description": "Movie 2 description"
+				"link": "http://techslides.com/demos/sample-videos/small.webm",
+				"description": "Movie 2 is a small webm video"
 			}, {
 				"title": "Movie 3",
-				"link": "http://example.com/movie.mp4",
-				"description": "Movie 3 description"
+				"link": "http://techslides.com/demos/sample-videos/small.ogv",
+				"description": "Movie 3 is a small ogg video"
 			}]
 		}
 	}
