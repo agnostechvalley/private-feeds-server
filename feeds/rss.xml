@@ -1,24 +1,51 @@
 <?xml version="1.0"?>
-<rss version="2.0">
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
 	<version>2.0</version>
 	<channel>
 		<title>Private Feed Server</title>
 		<link>http://private-feeds-server.herokuapp.com</link>
 		<description>Just a simple private feed server to OAuth against for an API token.</description>
+		<pubDate>Thu, 22 Oct 2015 23:18:00 -0400</pubDate>
+    <managingEditor>hi@agnostechvalley.com (AgnosTechValley)</managingEditor>
+    <language>en</language>
+    <copyright>Copyright 2015 AgnosTechValley</copyright>
+    <generator>agnostechvalley.com</generator>
+    <itunes:summary>Private Feed Server is a simple private feed server that mimics a podcast's RSS feed.</itunes:summary>
 		<item>
-			<title>Movie 1</title>
-			<link>http://techslides.com/demos/sample-videos/small.mp4</link>
-			<description>Movie 1 is a small mp4 video</description>
+			<title>
+				<![CDATA[003 - mp4 video]]>
+			</title>
+			<link>http://private-feeds-server.herokuapp.com/003-mp4-video.html</link>
+			<description>
+				<![CDATA[<h1>This is a small mp4 video</h1><h3>Attached Files</h3><ul><li><a href="http://techslides.com/demos/sample-videos/small.mp4">small.mp4</a></li></ul>]]>
+			</description>
+			<guid isPermaLink="false">60986647-e648-4dfc-8205-2803e4eb5f6c</guid>
+      <pubDate>Thu, 22 Oct 2015 23:18:00 -0400</pubDate>
+      <enclosure url="http://techslides.com/demos/sample-videos/small.mp4" length="5568" type="video/mp4"/>
 		</item>
 		<item>
-			<title>Movie 2</title>
-			<link>http://techslides.com/demos/sample-videos/small.webm</link>
-			<description>Movie 2 is a small webm video</description>
+			<title>
+				<![CDATA[002 - webm video]]>
+			</title>
+			<link>http://private-feeds-server.herokuapp.com/002-webm-video.html</link>
+			<description>
+				<![CDATA[<h1>This is a small webm video</h1><h3>Attached Files</h3><ul><li><a href="http://techslides.com/demos/sample-videos/small.webm">small.webm</a></li></ul>]]>
+			</description>
+			<guid isPermaLink="false">b199211e-6e34-4dd9-83d8-9e320935715e</guid>
+      <pubDate>Thu, 21 Oct 2015 20:46:00 -0400</pubDate>
+      <enclosure url="http://techslides.com/demos/sample-videos/small.webm" length="5568" type="video/webm"/>
 		</item>
 		<item>
-			<title>Movie 1</title>
-			<link>http://techslides.com/demos/sample-videos/small.ogv</link>
-			<description>Movie 2 is a small ogg video</description>
+			<title>
+				<![CDATA[001 - ogg video]]>
+			</title>
+			<link>http://private-feeds-server.herokuapp.com/001-ogg-video.html</link>
+			<description>
+				<![CDATA[<h1>This is a small ogg video</h1><h3>Attached Files</h3><ul><li><a href="http://techslides.com/demos/sample-videos/small.ogv">small.ogv</a></li></ul>]]>
+			</description>
+			<guid isPermaLink="false">40e40197-8896-48e7-8c15-dd486e85b8c0</guid>
+      <pubDate>Thu, 20 Oct 2015 16:46:00 -0400</pubDate>
+      <enclosure url="http://techslides.com/demos/sample-videos/small.ogv" length="5547" type="video/ogg"/>
 		</item>
 	</channel>
 </rss>
