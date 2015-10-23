@@ -9,6 +9,7 @@ var BearerStrategy = require('passport-http-bearer').Strategy;
 
 var app = express();
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, '/public')));
 
 passport.use(new BearerStrategy(function (token, done) {
 	redis.get('TOKEN:' + token, function (err, result) {
