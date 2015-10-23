@@ -6,6 +6,17 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var passport = require('passport');
 var BearerStrategy = require('passport-http-bearer').Strategy;
+var marked = require('marked');
+marked.setOptions({
+	renderer: new marked.Renderer(),
+	gfm: true,
+	tables: true,
+	breaks: false,
+	pedantic: false,
+	sanitize: true,
+	smartLists: true,
+	smartypants: false
+});
 
 var app = express();
 app.use(bodyParser.json());
@@ -24,6 +35,16 @@ passport.use(new BearerStrategy(function (token, done) {
 		}
 	});
 }));
+
+app.get('/', function (req, res) {
+	fs.readFile(path.join(__dirname, '/README.md'), 'utf-8', function (err, data) {
+		if (err) {
+			res.status(500).send(err);
+		}
+
+		res.send(marked(data));
+	});
+});
 
 app.post('/auth', function (req, res) {
 	if (req.body.username && req.body.password) {
