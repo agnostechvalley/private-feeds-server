@@ -15,6 +15,14 @@ Server will be started at http://localhost:3000.
 
 To be launched soon at http://private-feeds-server.herokuapp.com.
 
+## Basic Usage
+
+### HTTP Basic Auth
+
+`curl http://username:password@private-feed-server.herokuapp.com/feed-basic`
+
+Returns an RSS/XML feed
+
 ## API Routes
 
 ### `POST /auth`
@@ -44,7 +52,6 @@ Using the token from above to set the `Authorization` header.
 
 **Request Headers**
 
-- `Accept: application/json | application/rss+xml`
 - `Authorization: Bearer 57e10c03-61b9-4aaa-a6f8-af4d4f1e939b`
 
 **Response Body**
@@ -55,10 +62,7 @@ See `feeds/rss.json` and `feeds/rss.xml` in this repo.
 
 `http://agnostechvalley:polyglot@private-feeds-server.herokuapp.com/feed-basic`
 
-**Request Headers**
-
-- `Accept: application/json | application/rss+xml`
 
 **Response Body**
 
-See `feeds/rss.json` and `feeds/rss.xml` in this repo.
+See `feeds/rss.xml` in this repo.
