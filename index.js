@@ -6,6 +6,8 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var passport = require('passport');
 var BearerStrategy = require('passport-http-bearer').Strategy;
+var BasicStrategy = require('passport-http').BasicStrategy;
+
 var marked = require('marked');
 marked.setOptions({
 	renderer: new marked.Renderer(),
@@ -18,9 +20,21 @@ marked.setOptions({
 	smartypants: false
 });
 
+var feedResponse = require('./feeds/response');
+
 var app = express();
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '/public')));
+
+passport.use(new BasicStrategy(function (username, password, done) {
+	if (username === 'agnostechvalley' && password === 'polyglot') {
+		done(null, {
+			username: username
+		});
+	} else {
+		done(null, false);
+	}
+}));
 
 passport.use(new BearerStrategy(function (token, done) {
 	redis.get('TOKEN:' + token, function (err, result) {
@@ -61,32 +75,7 @@ app.post('/auth', function (req, res) {
 	}
 });
 
-app.get('/feed', passport.authenticate('bearer', {session: false}), function (req, res) {
-	res.format({
-		'application/json': function () {
-			fs.readFile(path.join(__dirname, '/feeds/rss.json'), function (err, data) {
-				if (err) {
-					res.status(500).send(err);
-				}
-
-				res.send(data);
-			});
-		},
-
-		'application/rss+xml': function () {
-			fs.readFile(path.join(__dirname, '/feeds/rss.xml'), function (err, data) {
-				if (err) {
-					res.status(500).send(err);
-				}
-
-				res.send(data);
-			});
-		},
-
-		'default': function () {
-			res.status(406).send('Not Acceptable');
-		}
-	});
-});
+app.get('/feed-basic', passport.authenticate('basic', {session: false}), feedResponse);
+app.get('/feed-bearer', passport.authenticate('bearer', {session: false}), feedResponse);
 
 app.listen(process.env.PORT || 3000);

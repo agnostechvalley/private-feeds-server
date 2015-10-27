@@ -38,12 +38,26 @@ Username and password can be any strings.
 }
 ```
 
-### `GET /feed`
+### `GET /feed-bearer`
+
+Using the token from above to set the `Authorization` header.
 
 **Request Headers**
 
 - `Accept: application/json | application/rss+xml`
 - `Authorization: Bearer 57e10c03-61b9-4aaa-a6f8-af4d4f1e939b`
+
+**Response Body**
+
+See `feeds/rss.json` and `feeds/rss.xml` in this repo.
+
+### `GET /feed-basic`
+
+`http://agnostechvalley:polyglot@private-feeds-server.herokuapp.com/feed-basic`
+
+**Request Headers**
+
+- `Accept: application/json | application/rss+xml`
 
 **Response Body**
 
