@@ -3,7 +3,7 @@ var path = require('path');
 
 module.exports = function (req, res) {
 	res.format({
-		'application/json': function () {
+		json: function () {
 			fs.readFile(path.join(__dirname, '/rss.json'), function (err, data) {
 				if (err) {
 					res.status(500).send(err);
@@ -13,7 +13,7 @@ module.exports = function (req, res) {
 			});
 		},
 
-		'application/rss+xml': function () {
+		default: function () {
 			fs.readFile(path.join(__dirname, '/rss.xml'), function (err, data) {
 				if (err) {
 					res.status(500).send(err);
@@ -21,10 +21,6 @@ module.exports = function (req, res) {
 
 				res.send(data);
 			});
-		},
-
-		'default': function () {
-			res.status(406).send('Not Acceptable');
 		}
 	});
 };
